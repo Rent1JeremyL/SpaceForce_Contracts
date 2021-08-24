@@ -52,8 +52,6 @@ contract CSPFORCE is
 	onlyOwner
     returns (uint256)
   {
-    require(!paused(), "ERC721Pausable: no token minting while paused");
-    
     _tokenIds.increment();
     uint256 newItemId = _tokenIds.current();
     _mint(recipient, newItemId);

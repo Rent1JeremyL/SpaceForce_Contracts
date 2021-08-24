@@ -2,7 +2,7 @@ const hre = require("hardhat");
 
 async function main() {
   const NFT = await hre.ethers.getContractFactory("CSPFORCE");
-  const CONTRACT_ADDRESS = "0x585aea01dd354Ad7cD3a58dc3d93657ed08052A4";
+  const CONTRACT_ADDRESS = "0x39949b5Cb777746501742bd4D0C3eBaDe85dFA81";
   const contract = NFT.attach(CONTRACT_ADDRESS);
   const owner = await contract.ownerOf(1);
   console.log("Owner:", owner);
