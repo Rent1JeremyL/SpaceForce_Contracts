@@ -1,0 +1,30 @@
+{
+  "name": "Condor MK1", 
+  "description": "Condor MK1 - Earth Defence Force - Fighter", 
+  "image": "https://gateway.pinata.cloud/ipfs/QmVomxQs5MNv2dqrv62Zs7ZmtU8d9GczaTCncQFgrNTjac",
+  "card_id": "R1_SH_F1_1_T1",
+  "external_url": "https://cryptospaceforce.io/?p=card_info&id=R1_SH_F1_1_T1",
+  "background_color": "1d2cb5",
+  "attributes": [
+		{
+		  "trait_type": "card_type", 
+		  "value": "Ship"
+		}, 
+		{
+		  "trait_type": "type", 
+		  "value": "Fighter"
+		}, 
+		{
+		  "trait_type": "tech", 
+		  "value": 1
+		}, 
+		{
+		  "trait_type": "rarity", 
+		  "value": "Common"
+		},
+		{
+		  "trait_type": "faction", 
+		  "value": "Earth Defence Force"
+		},			
+	  ],
+}
