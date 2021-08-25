@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 
 async function main() {
-  const NFT = await hre.ethers.getContractFactory("CSPFORCE");
+  const NFT = await hre.ethers.getContractFactory("CryptoSpaceForceCard");
   //const URI1 = "QmRBVSd79z4TxDcq1J7qHcfvP9cfrjkFWDMhb5ZciXaPj4";
   //const CARDID1 = "R1_SH_F1_1_T1";  
   

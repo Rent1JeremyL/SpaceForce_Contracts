@@ -8,9 +8,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol";
 import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
 
-contract CSPFORCE is 
+contract CryptoSpaceForceCard is 
   ERC721, 
   Ownable, 
   ERC721Enumerable, 
@@ -18,11 +17,9 @@ contract CSPFORCE is
   AccessControlEnumerable
 {
   using Counters for Counters.Counter;
-  using Strings for uint256;
   
   string dynamicBaseURI;
   mapping(uint256 => Card) public cards;
-  mapping(string => uint256) public ethIds;
   mapping(address => uint256[]) private _ownedTokens;
   
       struct Card {
@@ -39,6 +36,10 @@ contract CSPFORCE is
   
   event MintCard(address indexed holder, string cardId, uint256 indexed ethId);
   
+   /**
+    * @dev Make sure to pass trailing seperator on url 
+    * - Ex: https://gateway.pinata.cloud/ipfs/
+    */
    constructor(string memory _baseTokenURI) ERC721("Crypto Space Force", "CSFCARD") {
       dynamicBaseURI = _baseTokenURI;
       
@@ -59,7 +60,7 @@ contract CSPFORCE is
     function cardIdForTokenId(uint256 _tokenId) public view returns (string memory) {
         return cards[_tokenId].cardId;
     }
-    
+
    function burn(uint256 tokenId) public virtual {
         //solhint-disable-next-line max-line-length
         require(_isApprovedOrOwner(_msgSender(), tokenId), "ERC721Burnable: caller is not owner nor approved");
@@ -78,55 +79,55 @@ contract CSPFORCE is
     function tokensOfHolder(address holder) public view returns (uint256[] memory) {
         return _tokensOfOwner(holder);
     }
-
-/**     
-  function _setTokenURI(uint256 tokenId, string memory _tokenURI)
-    internal
-    virtual
-  {
-    _tokenURIs[tokenId] = _tokenURI;
-  }*/
-  
-  /**
-  function tokenURI(uint256 tokenId) 
-    public
-    view
-    virtual
-    override
-    returns (string memory)
-  {
-    require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
-    string memory _tokenURI = _tokenURIs[tokenId];
-    return _tokenURI;
-  } */
     
     function tokenURI(uint256 _tokenId) public view virtual override returns (string memory) {
-        return Strings.strConcat(
+        return strConcat(
             baseTokenURI(),
             cards[_tokenId].cardId
         );
     }
- 
-  function mintTo(address _to) internal {
-    _tokenIds.increment();
-    uint256 newItemId = _tokenIds.current();
-    _mint(_to, newTokenId);
+
+  /**
+    * @dev calculates the next token ID based on value of _currentTokenId
+    * @return uint256 for the next token ID
+    */
+  function _getNextTokenId() internal view returns (uint256) {
+    return _tokenIds.current() + 1;
   }
   
-  function mintCard(address _recipient, string memory _cardId, string memory _uriId) public {
-    // require(0 == ethIds[_cardId], "Card Exists");
+  /**
+   * @return unint256 of the token ID
+   */
+  function mint(address recipient) private returns (uint256) {
+    _tokenIds.increment();
+    uint256 newItemId = _tokenIds.current();
+    _mint(recipient, newItemId);
+    return newItemId;
+  }
+  
+  /**
+   * @dev instead of the standard mint we use mint Card
+   * 
+   * Requirements:
+   * - Must supply the Card Id and URI tag to append to baseTokenURI
+   */
+  function mintCard(address _recipient, string memory _cardId, string memory _uriId) 
+    public 
+    returns (uint256) 
+  {
     require(!paused(), "ERC721Pausable: no token minting while paused");
     require(hasRole(MINTER_ROLE, _msgSender()), "ERC721: minter only");
     
-    uint256 newEthId = _getNextTokenId();
+    uint256 newTokenId = _getNextTokenId();
 
-    cards[newEthId].cardId = _cardId;
-    cards[newEthId].uri = _uriId;
+    cards[newTokenId].cardId = _cardId;
+    cards[newTokenId].uri = _uriId;
 
-    mintTo(_recipient);
-    require(_getNextTokenId() == newEthId + 1, "Mint Card: Safety Check");
+    uint256 newItemId = mint(_recipient);
+    require(_getNextTokenId() == newTokenId + 1, "Mint Card: Safety Check");
 
-    emit MintCard(_recipient, _cardId, newEthId);
+    emit MintCard(_recipient, _cardId, newTokenId);
+    return newItemId;
   }
   
       /**
@@ -193,6 +194,36 @@ contract CSPFORCE is
         
         // otherwise, use the default ERC721.isApprovedForAll()
         return ERC721.isApprovedForAll(_owner, _operator);
-    } 
+    }
+    
+   // via https://github.com/oraclize/ethereum-api/blob/master/oraclizeAPI_0.5.sol
+  function strConcat(string memory _a, string memory _b, string memory _c, string memory _d, string memory _e) internal pure returns (string memory) {
+      bytes memory _ba = bytes(_a);
+      bytes memory _bb = bytes(_b);
+      bytes memory _bc = bytes(_c);
+      bytes memory _bd = bytes(_d);
+      bytes memory _be = bytes(_e);
+      string memory abcde = new string(_ba.length + _bb.length + _bc.length + _bd.length + _be.length);
+      bytes memory babcde = bytes(abcde);
+      uint k = 0;
+      for (uint i = 0; i < _ba.length; i++) babcde[k++] = _ba[i];
+      for (uint i = 0; i < _bb.length; i++) babcde[k++] = _bb[i];
+      for (uint i = 0; i < _bc.length; i++) babcde[k++] = _bc[i];
+      for (uint i = 0; i < _bd.length; i++) babcde[k++] = _bd[i];
+      for (uint i = 0; i < _be.length; i++) babcde[k++] = _be[i];
+      return string(babcde);
+    }
+
+    function strConcat(string memory _a, string memory _b, string memory _c, string memory _d) internal pure returns (string memory) {
+        return strConcat(_a, _b, _c, _d, "");
+    }
+
+    function strConcat(string memory _a, string memory _b, string memory _c) internal pure returns (string memory) {
+        return strConcat(_a, _b, _c, "", "");
+    }
+
+    function strConcat(string memory _a, string memory _b) internal pure returns (string memory) {
+        return strConcat(_a, _b, "", "", "");
+    }
     
 }
