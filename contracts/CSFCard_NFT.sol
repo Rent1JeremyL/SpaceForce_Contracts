@@ -34,7 +34,8 @@ contract CryptoSpaceForceCard is
   
   mapping (uint256 => string) private _tokenURIs;
   
-  event MintCard(address indexed holder, string cardId, uint256 indexed ethId);
+  event LockCard(address indexed holder, string cardId, string steemAddr, uint256 indexed _TokenId);
+  event MintCard(address indexed holder, string cardId, uint256 indexed tokenId);
   
    /**
     * @dev Make sure to pass trailing seperator on url 
@@ -72,8 +73,15 @@ contract CryptoSpaceForceCard is
      * @param owner address owning the tokens
      * @return uint256[] List of token IDs owned by the requested address
      */
-    function _tokensOfOwner(address owner) internal view returns (uint256[] storage) {
-        return _ownedTokens[owner];
+    function _tokensOfOwner(address owner) internal view returns (uint256[] memory) {
+        uint256 length = ERC721.balanceOf(owner);
+        require(length > 0, "ERC721TokensOfOwner: caller balance is zero");
+        
+        uint256[] memory _tokens = new uint256[](length);
+        for (uint256 i = 0; i < length; i++) {
+          _tokens[i] = _ownedTokens[owner][i];
+        }
+        return _tokens;
     }
     
     function tokensOfHolder(address holder) public view returns (uint256[] memory) {
@@ -83,7 +91,7 @@ contract CryptoSpaceForceCard is
     function tokenURI(uint256 _tokenId) public view virtual override returns (string memory) {
         return strConcat(
             baseTokenURI(),
-            cards[_tokenId].cardId
+            cards[_tokenId].uri
         );
     }
 
@@ -130,6 +138,30 @@ contract CryptoSpaceForceCard is
     return newItemId;
   }
   
+     /**
+      * @dev Give the card back to the contract
+      * - used in web transactions
+      */
+     function lockCard(uint256 _TokenId, string memory _steemAddr) public {
+        require(ownerOf(_TokenId) == _msgSender(), "ERC721LockCard: caller is not the owner");
+
+        string memory cardId = cardIdForTokenId(_TokenId);
+        transferFrom(msg.sender, address(this), _TokenId);
+
+        emit LockCard(msg.sender, cardId, _steemAddr, _TokenId);
+    }
+
+    function unlockCard(uint256 _TokenId, address _newHolder) public isLockedCard(_TokenId) {
+        require(hasRole(MINTER_ROLE, _msgSender()), "ERC721: minter only");
+        
+        transferFrom(address(this), _newHolder, _TokenId);
+    }
+ 
+     modifier isLockedCard(uint256 _TokenId) {
+        require(ownerOf(_TokenId) == address(this), "ERC721Card: Not Locked");
+        _;
+    }
+    
       /**
      * @dev Pauses all token transfers.
      *
