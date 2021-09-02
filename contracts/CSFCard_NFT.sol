@@ -91,8 +91,8 @@ contract CryptoSpaceForceCard is
      * @param owner address owning the tokens
      * @return uint256[] List of token IDs owned by the requested address
      */
-    function _tokensOfOwner(address owner)
-        internal
+    function tokensOfHolder(address owner)
+        public
         view
         returns (uint256[] memory)
     {
@@ -101,17 +101,9 @@ contract CryptoSpaceForceCard is
 
         uint256[] memory _tokens = new uint256[](length);
         for (uint256 i = 0; i < length; i++) {
-            _tokens[i] = _ownedTokens[owner][i];
+            _tokens[i] = ERC721Enumerable.tokenOfOwnerByIndex(owner,i);
         }
         return _tokens;
-    }
-
-    function tokensOfHolder(address holder)
-        public
-        view
-        returns (uint256[] memory)
-    {
-        return _tokensOfOwner(holder);
     }
 
     function tokenURI(uint256 _tokenId)
