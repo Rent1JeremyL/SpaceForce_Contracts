@@ -9,6 +9,8 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol";
 import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 
+import "./CSFUtil.sol";
+
 contract CryptoSpaceForceCard is
     ERC721,
     Ownable,
@@ -29,7 +31,7 @@ contract CryptoSpaceForceCard is
 
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
-
+    
     Counters.Counter private _tokenIds;
 
     mapping(uint256 => string) private _tokenURIs;
@@ -51,7 +53,7 @@ contract CryptoSpaceForceCard is
      * - Ex: ipfs:// or https://ipfs.io/ipfs/ or https://gateway.pinata.cloud/ipfs/
      */
     constructor(string memory _baseTokenURI)
-        ERC721("Crypto Space Force", "CSFCARD")
+        ERC721("Crypto Space Force Card", "CSFCARD")
     {
         dynamicBaseURI = _baseTokenURI;
 
@@ -113,8 +115,8 @@ contract CryptoSpaceForceCard is
         override
         returns (string memory)
     {
-        string memory _path = strConcat(baseTokenURI(), cards[_tokenId].uri);
-        _path = strConcat(_path, "/",cards[_tokenId].cardId,".json");
+        string memory _path = CSpaceForceUtil.strConcat(baseTokenURI(), cards[_tokenId].uri);
+        _path = CSpaceForceUtil.strConcat(_path, "/",cards[_tokenId].cardId,".json");
         return _path;
     }
 
@@ -269,55 +271,5 @@ contract CryptoSpaceForceCard is
     function totalMint() public view returns (uint256) {
         return _tokenIds.current();
     }
-    
-    // via https://github.com/oraclize/ethereum-api/blob/master/oraclizeAPI_0.5.sol
-    function strConcat(
-        string memory _a,
-        string memory _b,
-        string memory _c,
-        string memory _d,
-        string memory _e
-    ) internal pure returns (string memory) {
-        bytes memory _ba = bytes(_a);
-        bytes memory _bb = bytes(_b);
-        bytes memory _bc = bytes(_c);
-        bytes memory _bd = bytes(_d);
-        bytes memory _be = bytes(_e);
-        string memory abcde = new string(
-            _ba.length + _bb.length + _bc.length + _bd.length + _be.length
-        );
-        bytes memory babcde = bytes(abcde);
-        uint256 k = 0;
-        for (uint256 i = 0; i < _ba.length; i++) babcde[k++] = _ba[i];
-        for (uint256 i = 0; i < _bb.length; i++) babcde[k++] = _bb[i];
-        for (uint256 i = 0; i < _bc.length; i++) babcde[k++] = _bc[i];
-        for (uint256 i = 0; i < _bd.length; i++) babcde[k++] = _bd[i];
-        for (uint256 i = 0; i < _be.length; i++) babcde[k++] = _be[i];
-        return string(babcde);
-    }
 
-    function strConcat(
-        string memory _a,
-        string memory _b,
-        string memory _c,
-        string memory _d
-    ) internal pure returns (string memory) {
-        return strConcat(_a, _b, _c, _d, "");
-    }
-
-    function strConcat(
-        string memory _a,
-        string memory _b,
-        string memory _c
-    ) internal pure returns (string memory) {
-        return strConcat(_a, _b, _c, "", "");
-    }
-
-    function strConcat(string memory _a, string memory _b)
-        internal
-        pure
-        returns (string memory)
-    {
-        return strConcat(_a, _b, "", "", "");
-    }
 }
