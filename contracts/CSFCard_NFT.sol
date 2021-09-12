@@ -266,6 +266,10 @@ contract CryptoSpaceForceCard is
         return ERC721.isApprovedForAll(_owner, _operator);
     }
 
+    function totalMint() public view returns (uint256) {
+        return _tokenIds.current();
+    }
+    
     // via https://github.com/oraclize/ethereum-api/blob/master/oraclizeAPI_0.5.sol
     function strConcat(
         string memory _a,
