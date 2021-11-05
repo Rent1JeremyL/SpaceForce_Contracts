@@ -1,0 +1,45 @@
+{
+  "name": "CSF-Card-@NAME@", 
+  "description": "@FACNAME@ - @SHIPCLASS@",
+  "description": "@ABILITY@",  
+  "image": "https://gateway.pinata.cloud/ipfs/@IMGURI@",
+  "card_id": "@NAME@",
+  "external_url": "",
+  "background_color": "c9f2f5",
+  "attributes": [
+		{
+		  "trait_type": "card_type", 
+		  "value": "@CARDTYPE@"
+		}, 
+		{
+		  "trait_type": "ship_class", 
+		  "value": "@SHIPCLASS@"
+		},
+		{
+		  "trait_type": "ship_type", 
+		  "value": "@SHIPTYPE@"
+		}, 		
+		{
+		 "display_type":"number",
+         "trait_type":"tech",
+         "value":@TECH@,
+         "max_value":3
+		},
+		{
+		  "trait_type": "cost", 
+		  "value": @COST@
+		}, 		
+		{
+		  "trait_type": "rarity", 
+		  "value": "@RARITY@"
+		},
+		{
+		  "trait_type": "faction", 
+		  "value": "@FACNAME@"
+		},
+		{
+		  "trait_type": "ability", 
+		  "value": "@ABILITY@"
+		}		
+	  ]
+}

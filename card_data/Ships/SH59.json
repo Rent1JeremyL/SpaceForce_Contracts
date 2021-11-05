@@ -1,0 +1,40 @@
+{
+  "name": "CSF-Card-SH59", 
+  "description": "United Sol Republic - Fighter",
+  "image": "https://gateway.pinata.cloud/ipfs/",
+  "card_id": "SH59",
+  "external_url": "",
+  "background_color": "c9f2f5",
+  "attributes": [
+		{
+		  "trait_type": "card_type", 
+		  "value": "Ship"
+		}, 
+		{
+		  "trait_type": "ship_class", 
+		  "value": "Fighter"
+		},
+		{
+		  "trait_type": "ship_type", 
+		  "value": "Heavy Assault"
+		}, 		
+		{
+		 "display_type":"number",
+         "trait_type":"tech",
+         "value":2,
+         "max_value":3
+		},
+		{
+		  "trait_type": "cost", 
+		  "value": 2
+		}, 		
+		{
+		  "trait_type": "rarity", 
+		  "value": "Uncommon"
+		},
+		{
+		  "trait_type": "faction", 
+		  "value": "United Sol Republic"
+		}	
+	  ]
+}

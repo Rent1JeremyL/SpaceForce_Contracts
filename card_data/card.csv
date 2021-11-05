@@ -1,0 +1,61 @@
+Card ID|Name|Card Type|ShipClass|ShipType|Faction|FactionName|Rarity|Cost|Tech|Ability|IMAGE URI
+1|SH1|Ship|Fighter|Interceptor|Earth|United Sol Republic|Common|1|1||QmbExDFTZUCshNhGSLmAZPrVWRjEa9QKs1CNKx36vHwi4G
+2|SH2|Ship|Fighter|Multi-Role|Earth|United Sol Republic|Common|1|1||QmPChpWofbQothbbaiVNt5y1t7B8CAmnrcsCMncEk4HQay
+3|SH3|Ship|Fighter|Heavy Assault|Earth|United Sol Republic|Common|1|1||
+4|SH4|Ship|Fighter|Interceptor|Mars|Mars Defense Force|Common|1|1||Qme4cS8wWi4caQyaSBk4zAgfEHZATPAiQ6ELXufDwMDWGx
+5|SH5|Ship|Fighter|Multi-Role|Mars|Mars Defense Force|Common|1|1||
+6|SH6|Ship|Fighter|Heavy Assault|Mars|Mars Defense Force|Common|1|1||
+7|SH7|Ship|Fighter|Interceptor|Alien|Achakang Empire|Common|1|1||QmcZPQzK66trSEtAHacPLk9Agi95qYWMwdZtNs1EFAtkte
+8|SH8|Ship|Fighter|Multi-Role|Alien|Achakang Empire|Common|1|1||
+9|SH9|Ship|Fighter|Heavy Assault|Alien|Achakang Empire|Common|1|1||
+10|SH10|Ship|Fighter|Interceptor|Robot AI|Androknight Protectorate|Common|1|1||QmaPzLwfL8vsiJfG3nDx6kDZRyfSYuW8oaC27HuXcJfGx6
+11|SH11|Ship|Fighter|Multi-Role|Robot AI|Androknight Protectorate|Common|1|1||
+12|SH12|Ship|Fighter|Heavy Assault|Robot AI|Androknight Protectorate|Common|1|1||
+13|SH13|Ship|Fighter|Interceptor|Raider|Assandun Syndicate|Uncommon|1|1||QmceARF1SAom8PKa6MW89t7auoPUoQp8pPcsCkNhNryZVi
+14|SH14|Ship|Fighter|Multi-Role|Raider|Assandun Syndicate|Uncommon|1|1||
+15|SH15|Ship|Corvette|Light|Earth|United Sol Republic|Common|2|1||
+16|SH16|Ship|Corvette|Multi-Gun|Earth|United Sol Republic|Common|2|1||
+17|SH17|Ship|Corvette|Missile|Earth|United Sol Republic|Common|2|1||
+18|SH18|Ship|Corvette|Light|Mars|Mars Defense Force|Common|2|1||
+19|SH19|Ship|Corvette|Multi-Gun|Mars|Mars Defense Force|Common|2|1||
+20|SH20|Ship|Corvette|Missile|Mars|Mars Defense Force|Common|2|1||
+21|SH21|Ship|Corvette|Light|Alien|Achakang Empire|Common|2|1||
+22|SH22|Ship|Corvette|Multi-Gun|Alien|Achakang Empire|Common|2|1||
+23|SH23|Ship|Corvette|Missile|Alien|Achakang Empire|Common|2|1||
+24|SH24|Ship|Corvette|Light|Robot AI|Androknight Protectorate|Common|2|1||
+25|SH25|Ship|Corvette|Multi-Gun|Robot AI|Androknight Protectorate|Common|2|1||
+26|SH26|Ship|Corvette|Missile|Robot AI|Androknight Protectorate|Common|2|1||
+27|SH27|Ship|Corvette|Light|Raider|Assandun Syndicate|Uncommon|2|1||
+28|SH28|Ship|Corvette|Multi-Gun|Raider|Assandun Syndicate|Uncommon|2|1||
+29|SH29|Ship|Frigate|Assault|Earth|United Sol Republic|Uncommon|3|1||
+30|SH30|Ship|Frigate|Multi-Beam|Earth|United Sol Republic|Uncommon|3|1||
+31|SH31|Ship|Frigate|Multi-Gun|Earth|United Sol Republic|Uncommon|3|1||
+32|SH32|Ship|Frigate|Assault|Mars|Mars Defense Force|Uncommon|3|1||
+33|SH33|Ship|Frigate|Multi-Beam|Mars|Mars Defense Force|Uncommon|3|1||
+34|SH34|Ship|Frigate|Multi-Gun|Mars|Mars Defense Force|Uncommon|3|1||
+35|SH35|Ship|Frigate|Multi-Beam|Alien|Achakang Empire|Uncommon|3|1||
+36|SH36|Ship|Frigate|Multi-Gun|Alien|Achakang Empire|Uncommon|3|1||
+37|SH37|Ship|Frigate|Multi-Beam|Robot AI|Androknight Protectorate|Uncommon|3|1||
+38|SH38|Ship|Frigate|Multi-Gun|Robot AI|Androknight Protectorate|Uncommon|3|1||
+39|SH39|Ship|Frigate|Multi-Beam|Raider|Assandun Syndicate|Rare|3|1||
+40|SH40|Ship|Frigate|Multi-Gun|Raider|Assandun Syndicate|Rare|3|1||
+41|SH41|Ship|Destroyer|Light|Earth|United Sol Republic|Rare|4|1||
+42|SH42|Ship|Destroyer|Medium|Earth|United Sol Republic|Rare|4|1||
+43|SH43|Ship|Destroyer|Heavy|Earth|United Sol Republic|Rare|4|1||
+44|SH44|Ship|Destroyer|Light|Mars|Mars Defense Force|Rare|4|1||
+45|SH45|Ship|Destroyer|Medium|Mars|Mars Defense Force|Rare|4|1||
+46|SH46|Ship|Destroyer|Heavy|Mars|Mars Defense Force|Rare|4|1||
+47|SH47|Ship|Destroyer|Light|Alien|Achakang Empire|Rare|4|1||
+48|SH48|Ship|Destroyer|Medium|Alien|Achakang Empire|Rare|4|1||
+49|SH49|Ship|Destroyer|Medium|Robot AI|Androknight Protectorate|Rare|4|1||
+50|SH50|Ship|Destroyer|Heavy|Robot AI|Androknight Protectorate|Rare|4|1||
+51|SH51|Ship|Destroyer|Light|Raider|Assandun Syndicate|Rare|4|1||
+52|SH52|Ship|Destroyer|Heavy|Raider|Assandun Syndicate|Rare|4|1||
+53|SH53|Ship|Cruiser|Battle|Earth|United Sol Republic|Rare|5|1||
+54|SH54|Ship|Cruiser|Battle|Mars|Mars Defense Force|Rare|5|1||
+55|SH55|Ship|Cruiser|Battle|Alien|Achakang Empire|Rare|5|1||
+56|SH56|Ship|Cruiser|Battle|Robot AI|Androknight Protectorate|Rare|5|1||
+57|SH57|Ship|Fighter|Interceptor|Earth|United Sol Republic|Uncommon|2|2||
+58|SH58|Ship|Fighter|Multi-Role|Earth|United Sol Republic|Uncommon|2|2||
+59|SH59|Ship|Fighter|Heavy Assault|Earth|United Sol Republic|Uncommon|2|2||
+60|AB1|Ability|||||Common|1||Rapid Fire|QmSMVghscY1LAaHsAF2j2vfSmprapCMRnmkKh96twYrvXL

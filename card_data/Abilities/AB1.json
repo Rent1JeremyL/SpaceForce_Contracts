@@ -1,0 +1,26 @@
+{
+  "name": "CSF-Card-AB1", 
+  "description": "Rapid Fire",  
+  "image": "https://gateway.pinata.cloud/ipfs/QmSMVghscY1LAaHsAF2j2vfSmprapCMRnmkKh96twYrvXL",
+  "card_id": "AB1",
+  "external_url": "",
+  "background_color": "c9f2f5",
+  "attributes": [
+		{
+		  "trait_type": "card_type", 
+		  "value": "Ability"
+		}, 
+		{
+		  "trait_type": "cost", 
+		  "value": 1
+		}, 		
+		{
+		  "trait_type": "rarity", 
+		  "value": "Common"
+		},
+		{
+		  "trait_type": "ability", 
+		  "value": "Rapid Fire"
+		}		
+	  ]
+}
