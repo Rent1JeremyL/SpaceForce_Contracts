@@ -1,20 +1,20 @@
 #!/usr/bin/sh
 JSON1=./card_sh.template
 JSON2=./card_ab.template
-#58|SH58|Ship|Fighter|Multi-Role|Earth|United Sol Republic|Uncommon|2|2|NULL|
 
 cat ${1:?} | while read LINE
 do
+	gameName=$(echo $LINE | awk -F "|" '{print $3}')
 	cName=$(echo $LINE | awk -F "|" '{print $2}')
-	facName=$(echo $LINE | awk -F "|" '{print $7}')
-	shipClass=$(echo $LINE | awk -F "|" '{print $4}')
-	ability=$(echo $LINE | awk -F "|" '{print $11}')
-	imgURI=$(echo $LINE | awk -F "|" '{print $12}')
-	cType=$(echo $LINE | awk -F "|" '{print $3}')
-	shipType=$(echo $LINE | awk -F "|" '{print $5}')
-	tech=$(echo $LINE | awk -F "|" '{print $10}')
-	cost=$(echo $LINE | awk -F "|" '{print $9}')
-	rare=$(echo $LINE | awk -F "|" '{print $8}')
+	facName=$(echo $LINE | awk -F "|" '{print $8}')
+	shipClass=$(echo $LINE | awk -F "|" '{print $5}')
+	ability=$(echo $LINE | awk -F "|" '{print $12}')
+	imgURI=$(echo $LINE | awk -F "|" '{print $13}')
+	cType=$(echo $LINE | awk -F "|" '{print $4}')
+	shipType=$(echo $LINE | awk -F "|" '{print $6}')
+	tech=$(echo $LINE | awk -F "|" '{print $11}')
+	cost=$(echo $LINE | awk -F "|" '{print $10}')
+	rare=$(echo $LINE | awk -F "|" '{print $9}')
 	
 	newFile=/home/ec2-user/json/build/${cName}.json
 	
@@ -24,6 +24,7 @@ do
 		cp $JSON2 ${newFile}
 	fi
 	
+	sed -i "s|@GAMENAME@|${gameName}|g" ${newFile}
 	sed -i 's/@NAME@/'${cName}'/g' ${newFile}
 	sed -i "s|@FACNAME@|${facName}|g" ${newFile}
 	sed -i 's/@SHIPCLASS@/'${shipClass}'/g' ${newFile}

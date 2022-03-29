@@ -1,14 +1,14 @@
 {
-  "name": "@ABILITY@", 
-  "description": "@NAME@, @RARITY@ ability card @ABILITY@",  
-  "image": "https://conquestofsol.com/_nft/images/@IMGURI@",
-  "card_id": "@NAME@",
+  "name": "Energy Reserves", 
+  "description": "AB2, Common ability card Energy Reserves",  
+  "image": "https://conquestofsol.com/_nft/images/AB2.png",
+  "card_id": "AB2",
   "external_url": "https://conquestofsol.com/",
   "background_color": "c9f2f5",
   "attributes": [
 		{
 		  "trait_type": "card_type", 
-		  "value": "@CARDTYPE@"
+		  "value": "Ability"
 		},
 		{
 		  "trait_type": "edition", 
@@ -16,15 +16,15 @@
 		}, 		
 		{
 		  "trait_type": "cost", 
-		  "value": @COST@
+		  "value": 0
 		}, 		
 		{
 		  "trait_type": "rarity", 
-		  "value": "@RARITY@"
+		  "value": "Common"
 		},
 		{
 		  "trait_type": "ability", 
-		  "value": "@ABILITY@"
+		  "value": "Energy Reserves"
 		}		
 	  ]
 }

@@ -1,61 +1,62 @@
-Card ID|Name|Card Type|ShipClass|ShipType|Faction|FactionName|Rarity|Cost|Tech|Ability|IMAGE URI
-1|SH1|Ship|Fighter|Interceptor|Earth|United Sol Republic|Common|1|1||QmbExDFTZUCshNhGSLmAZPrVWRjEa9QKs1CNKx36vHwi4G
-2|SH2|Ship|Fighter|Multi-Role|Earth|United Sol Republic|Common|1|1||QmPChpWofbQothbbaiVNt5y1t7B8CAmnrcsCMncEk4HQay
-3|SH3|Ship|Fighter|Heavy Assault|Earth|United Sol Republic|Common|1|1||
-4|SH4|Ship|Fighter|Interceptor|Mars|Mars Defense Force|Common|1|1||Qme4cS8wWi4caQyaSBk4zAgfEHZATPAiQ6ELXufDwMDWGx
-5|SH5|Ship|Fighter|Multi-Role|Mars|Mars Defense Force|Common|1|1||
-6|SH6|Ship|Fighter|Heavy Assault|Mars|Mars Defense Force|Common|1|1||
-7|SH7|Ship|Fighter|Interceptor|Alien|Achakang Empire|Common|1|1||QmcZPQzK66trSEtAHacPLk9Agi95qYWMwdZtNs1EFAtkte
-8|SH8|Ship|Fighter|Multi-Role|Alien|Achakang Empire|Common|1|1||
-9|SH9|Ship|Fighter|Heavy Assault|Alien|Achakang Empire|Common|1|1||
-10|SH10|Ship|Fighter|Interceptor|Robot AI|Androknight Protectorate|Common|1|1||QmaPzLwfL8vsiJfG3nDx6kDZRyfSYuW8oaC27HuXcJfGx6
-11|SH11|Ship|Fighter|Multi-Role|Robot AI|Androknight Protectorate|Common|1|1||
-12|SH12|Ship|Fighter|Heavy Assault|Robot AI|Androknight Protectorate|Common|1|1||
-13|SH13|Ship|Fighter|Interceptor|Raider|Assandun Syndicate|Uncommon|1|1||QmceARF1SAom8PKa6MW89t7auoPUoQp8pPcsCkNhNryZVi
-14|SH14|Ship|Fighter|Multi-Role|Raider|Assandun Syndicate|Uncommon|1|1||
-15|SH15|Ship|Corvette|Light|Earth|United Sol Republic|Common|2|1||
-16|SH16|Ship|Corvette|Multi-Gun|Earth|United Sol Republic|Common|2|1||
-17|SH17|Ship|Corvette|Missile|Earth|United Sol Republic|Common|2|1||
-18|SH18|Ship|Corvette|Light|Mars|Mars Defense Force|Common|2|1||
-19|SH19|Ship|Corvette|Multi-Gun|Mars|Mars Defense Force|Common|2|1||
-20|SH20|Ship|Corvette|Missile|Mars|Mars Defense Force|Common|2|1||
-21|SH21|Ship|Corvette|Light|Alien|Achakang Empire|Common|2|1||
-22|SH22|Ship|Corvette|Multi-Gun|Alien|Achakang Empire|Common|2|1||
-23|SH23|Ship|Corvette|Missile|Alien|Achakang Empire|Common|2|1||
-24|SH24|Ship|Corvette|Light|Robot AI|Androknight Protectorate|Common|2|1||
-25|SH25|Ship|Corvette|Multi-Gun|Robot AI|Androknight Protectorate|Common|2|1||
-26|SH26|Ship|Corvette|Missile|Robot AI|Androknight Protectorate|Common|2|1||
-27|SH27|Ship|Corvette|Light|Raider|Assandun Syndicate|Uncommon|2|1||
-28|SH28|Ship|Corvette|Multi-Gun|Raider|Assandun Syndicate|Uncommon|2|1||
-29|SH29|Ship|Frigate|Assault|Earth|United Sol Republic|Uncommon|3|1||
-30|SH30|Ship|Frigate|Multi-Beam|Earth|United Sol Republic|Uncommon|3|1||
-31|SH31|Ship|Frigate|Multi-Gun|Earth|United Sol Republic|Uncommon|3|1||
-32|SH32|Ship|Frigate|Assault|Mars|Mars Defense Force|Uncommon|3|1||
-33|SH33|Ship|Frigate|Multi-Beam|Mars|Mars Defense Force|Uncommon|3|1||
-34|SH34|Ship|Frigate|Multi-Gun|Mars|Mars Defense Force|Uncommon|3|1||
-35|SH35|Ship|Frigate|Multi-Beam|Alien|Achakang Empire|Uncommon|3|1||
-36|SH36|Ship|Frigate|Multi-Gun|Alien|Achakang Empire|Uncommon|3|1||
-37|SH37|Ship|Frigate|Multi-Beam|Robot AI|Androknight Protectorate|Uncommon|3|1||
-38|SH38|Ship|Frigate|Multi-Gun|Robot AI|Androknight Protectorate|Uncommon|3|1||
-39|SH39|Ship|Frigate|Multi-Beam|Raider|Assandun Syndicate|Rare|3|1||
-40|SH40|Ship|Frigate|Multi-Gun|Raider|Assandun Syndicate|Rare|3|1||
-41|SH41|Ship|Destroyer|Light|Earth|United Sol Republic|Rare|4|1||
-42|SH42|Ship|Destroyer|Medium|Earth|United Sol Republic|Rare|4|1||
-43|SH43|Ship|Destroyer|Heavy|Earth|United Sol Republic|Rare|4|1||
-44|SH44|Ship|Destroyer|Light|Mars|Mars Defense Force|Rare|4|1||
-45|SH45|Ship|Destroyer|Medium|Mars|Mars Defense Force|Rare|4|1||
-46|SH46|Ship|Destroyer|Heavy|Mars|Mars Defense Force|Rare|4|1||
-47|SH47|Ship|Destroyer|Light|Alien|Achakang Empire|Rare|4|1||
-48|SH48|Ship|Destroyer|Medium|Alien|Achakang Empire|Rare|4|1||
-49|SH49|Ship|Destroyer|Medium|Robot AI|Androknight Protectorate|Rare|4|1||
-50|SH50|Ship|Destroyer|Heavy|Robot AI|Androknight Protectorate|Rare|4|1||
-51|SH51|Ship|Destroyer|Light|Raider|Assandun Syndicate|Rare|4|1||
-52|SH52|Ship|Destroyer|Heavy|Raider|Assandun Syndicate|Rare|4|1||
-53|SH53|Ship|Cruiser|Battle|Earth|United Sol Republic|Rare|5|1||
-54|SH54|Ship|Cruiser|Battle|Mars|Mars Defense Force|Rare|5|1||
-55|SH55|Ship|Cruiser|Battle|Alien|Achakang Empire|Rare|5|1||
-56|SH56|Ship|Cruiser|Battle|Robot AI|Androknight Protectorate|Rare|5|1||
-57|SH57|Ship|Fighter|Interceptor|Earth|United Sol Republic|Uncommon|2|2||
-58|SH58|Ship|Fighter|Multi-Role|Earth|United Sol Republic|Uncommon|2|2||
-59|SH59|Ship|Fighter|Heavy Assault|Earth|United Sol Republic|Uncommon|2|2||
-60|AB1|Ability|||||Common|1||Rapid Fire|QmSMVghscY1LAaHsAF2j2vfSmprapCMRnmkKh96twYrvXL
+Card ID|Name|GameName|Card_Type|ShipClass|ShipType|Faction|FactionName|Rarity|Cost|Tech|Ability|IMAGE_URI
+1|SH1|Kestrel|Ship|Fighter|Interceptor|Earth|United Sol Republic|Common|1|1|NULL|SH1.png
+2|SH2|Harpy|Ship|Fighter|Multi-Role|Earth|United Sol Republic|Common|1|1|NULL|SH2.png
+3|SH3|Buzzard MKII|Ship|Fighter|Heavy Assault|Earth|United Sol Republic|Common|1|1|NULL|SH3.png
+4|SH4|Asp|Ship|Fighter|Interceptor|Mars|Mars Defense Force|Common|1|1|NULL|SH4.png
+5|SH5|Vipera|Ship|Fighter|Multi-Role|Mars|Mars Defense Force|Common|1|1|NULL|SH5.png
+6|SH6|Cobra|Ship|Fighter|Heavy Assault|Mars|Mars Defense Force|Common|1|1|NULL|SH6.png
+7|SH7|Aculeo XB3|Ship|Fighter|Interceptor|Alien|Achakang Empire|Common|1|1|NULL|SH7.png
+8|SH8|Aculeo XB7|Ship|Fighter|Multi-Role|Alien|Achakang Empire|Common|1|1|NULL|SH8.png
+9|SH9|Veloxim|Ship|Fighter|Heavy Assault|Alien|Achakang Empire|Common|1|1|NULL|SH9.png
+10|SH10|Preserver|Ship|Fighter|Interceptor|Robot AI|Androknight Protectorate|Common|1|1|NULL|SH10.png
+11|SH11|Keeper|Ship|Fighter|Multi-Role|Robot AI|Androknight Protectorate|Common|1|1|NULL|SH11.png
+12|SH12|Warder|Ship|Fighter|Heavy Assault|Robot AI|Androknight Protectorate|Common|1|1|NULL|SH12.png
+13|SH13|Cerus XI|Ship|Fighter|Interceptor|Raider|Assandun Brotherhood|Uncommon|1|1|NULL|SH13.png
+14|SH14|Dolus II|Ship|Fighter|Multi-Role|Raider|Assandun Brotherhood|Uncommon|1|1|NULL|SH14.png
+15|SH15|Falcon|Ship|Frigate|Light|Earth|United Sol Republic|Common|2|1|NULL|SH15.png
+16|SH16|Shoebill|Ship|Frigate|Multi-Gun|Earth|United Sol Republic|Common|2|1|NULL|SH16.png
+17|SH17|Osprey|Ship|Frigate|Missile|Earth|United Sol Republic|Common|2|1|NULL|SH17.png
+18|SH18|Copperhead|Ship|Frigate|Light|Mars|Mars Defense Force|Common|2|1|NULL|SH18.png
+19|SH19|Mamba|Ship|Frigate|Multi-Gun|Mars|Mars Defense Force|Common|2|1|NULL|SH19.png
+20|SH20|Rattler|Ship|Frigate|Missile|Mars|Mars Defense Force|Common|2|1|NULL|SH20.png
+21|SH21|Venator|Ship|Frigate|Light|Alien|Achakang Empire|Common|2|1|NULL|SH21.png
+22|SH22|Purmors|Ship|Frigate|Multi-Gun|Alien|Achakang Empire|Common|2|1|NULL|SH22.png
+23|SH23|Ortus|Ship|Frigate|Missile|Alien|Achakang Empire|Common|2|1|NULL|SH23.png
+24|SH24|Defender|Ship|Frigate|Light|Robot AI|Androknight Protectorate|Common|2|1|NULL|SH24.png
+25|SH25|Purifier|Ship|Frigate|Multi-Gun|Robot AI|Androknight Protectorate|Common|2|1|NULL|SH25.png
+26|SH26|Sentinel|Ship|Frigate|Missile|Robot AI|Androknight Protectorate|Common|2|1|NULL|SH26.png
+27|SH27|Horus I|Ship|Frigate|Light|Raider|Assandun Brotherhood|Uncommon|2|1|NULL|SH27.png
+28|SH28|Osiris II|Ship|Frigate|Multi-Gun|Raider|Assandun Brotherhood|Uncommon|2|1|NULL|SH28.png
+29|SH29|Raven|Ship|Destroyer|Assault|Earth|United Sol Republic|Uncommon|3|1|NULL|SH29.png
+30|SH30|Crow|Ship|Destroyer|Multi-Beam|Earth|United Sol Republic|Uncommon|3|1|NULL|SH30.png
+31|SH31|Rook|Ship|Destroyer|Multi-Gun|Earth|United Sol Republic|Uncommon|3|1|NULL|SH31.png
+32|SH32|Hognose|Ship|Destroyer|Assault|Mars|Mars Defense Force|Uncommon|3|1|NULL|SH32.png
+33|SH33|Boomslang|Ship|Destroyer|Multi-Beam|Mars|Mars Defense Force|Uncommon|3|1|NULL|SH33.png
+34|SH34|Adder|Ship|Destroyer|Multi-Gun|Mars|Mars Defense Force|Uncommon|3|1|NULL|SH34.png
+35|SH35|Eversor|Ship|Destroyer|Multi-Beam|Alien|Achakang Empire|Uncommon|3|1|NULL|SH35.png
+36|SH36|Lunam|Ship|Destroyer|Multi-Gun|Alien|Achakang Empire|Uncommon|3|1|NULL|SH36.png
+37|SH37|Gladii|Ship|Destroyer|Assault|Alien|Achakang Empire|Uncommon|3|1|NULL|SH37.png
+38|SH38|Paladin|Ship|Destroyer|Multi-Beam|Robot AI|Androknight Protectorate|Uncommon|3|1|NULL|SH38.png
+39|SH39|Savior|Ship|Destroyer|Multi-Gun|Robot AI|Androknight Protectorate|Uncommon|3|1|NULL|SH39.png
+40|SH40|Watchman|Ship|Destroyer|Assault|Robot AI|Androknight Protectorate|Uncommon|3|1|NULL|SH40.png
+41|SH41|Freya|Ship|Destroyer|Multi-Beam|Raider|Assandun Brotherhood|Rare|3|1|NULL|SH41.png
+42|SH42|Freya|Ship|Destroyer|Multi-Gun|Raider|Assandun Brotherhood|Rare|3|1|NULL|SH42.png
+43|SH43|Vulture|Ship|Cruiser|Light|Earth|United Sol Republic|Rare|4|1|NULL|SH43.png
+44|SH44|Harrier|Ship|Cruiser|Heavy|Earth|United Sol Republic|Rare|4|1|NULL|SH44.png
+45|SH45|Python|Ship|Cruiser|Medium|Mars|Mars Defense Force|Rare|4|1|NULL|SH45.png
+46|SH46|Anaconda|Ship|Cruiser|Heavy|Mars|Mars Defense Force|Rare|4|1|NULL|SH46.png
+47|SH47|Avem|Ship|Cruiser|Light|Alien|Achakang Empire|Rare|4|1|NULL|SH47.png
+48|SH48||Ship|Cruiser|Medium|Alien|Achakang Empire|Rare|4|1|NULL|SH48.png
+49|SH49|Bulwark|Ship|Cruiser|Medium|Robot AI|Androknight Protectorate|Rare|4|1|NULL|SH49.png
+50|SH50|Tarak|Ship|Cruiser|Heavy|Robot AI|Androknight Protectorate|Rare|4|1|NULL|SH50.png
+51|SH51||Ship|Cruiser|Light|Raider|Assandun Brotherhood|Rare|4|1|NULL|SH51.png
+52|SH52|Odin|Ship|Cruiser|Heavy|Raider|Assandun Brotherhood|Rare|4|1|NULL|SH52.png
+53|SH53|Teratorn|Ship|Battle Cruiser|Battle|Earth|United Sol Republic|Epic|5|1|NULL|SH53.png
+54|SH54|Titanboa|Ship|Battle Cruiser|Battle|Mars|Mars Defense Force|Epic|5|1|NULL|SH54.png
+55|SH55||Ship|Battle Cruiser|Battle|Alien|Achakang Empire|Epic|5|1|NULL|SH55.png
+56|SH56|Andromeda|Ship|Battle Cruiser|Battle|Robot AI|Androknight Protectorate|Epic|5|1|NULL|SH56.png
+57|SH57||Ship|Fighter|Interceptor|Earth|United Sol Republic|Uncommon|1|2|NULL|SH57.png
+58|SH58||Ship|Fighter|Multi-Role|Earth|United Sol Republic|Uncommon|1|2|NULL|SH58.png
+59|SH59||Ship|Fighter|Heavy Assault|Earth|United Sol Republic|Uncommon|1|2|NULL|SH59.png
+60|AB1|Rapid Fire|Ability|NULL|NULL|NULL|NULL|Common|1|NULL|Rapid Fire|AB1.png
+61|AB2|Energy Reserves|Ability|NULL|NULL|NULL|NULL|Common|0|NULL|Energy Reserves|AB2.png

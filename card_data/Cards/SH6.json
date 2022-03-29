@@ -1,14 +1,14 @@
 {
-  "name": "@GAMENAME@", 
-  "description": "@GAMENAME@, @NAME@, @RARITY@ ship card from the @FACNAME@",
-  "image": "https://conquestofsol.com/_nft/images/@IMGURI@",
-  "card_id": "@NAME@",
+  "name": "Cobra", 
+  "description": "Cobra, SH6, Common ship card from the Mars Defense Force",
+  "image": "https://conquestofsol.com/_nft/images/SH6.png",
+  "card_id": "SH6",
   "external_url": "https://conquestofsol.com/",
   "background_color": "fff2cc",
   "attributes": [
 		{
 		  "trait_type": "card_type", 
-		  "value": "@CARDTYPE@"
+		  "value": "Ship"
 		},
 		{
 		  "trait_type": "edition", 
@@ -16,29 +16,29 @@
 		},		
 		{
 		  "trait_type": "ship_class", 
-		  "value": "@SHIPCLASS@"
+		  "value": "Fighter"
 		},
 		{
 		  "trait_type": "ship_type", 
-		  "value": "@SHIPTYPE@"
+		  "value": "Heavy Assault"
 		}, 		
 		{
 		 "display_type":"number",
 		  "trait_type":"tech",
-		  "value":@TECH@,
+		  "value":1,
 		  "max_value":3
 		},
 		{
 		  "trait_type": "cost", 
-		  "value": @COST@
+		  "value": 1
 		}, 		
 		{
 		  "trait_type": "rarity", 
-		  "value": "@RARITY@"
+		  "value": "Common"
 		},
 		{
 		  "trait_type": "faction", 
-		  "value": "@FACNAME@"
+		  "value": "Mars Defense Force"
 		}	
 	  ]
 }

@@ -1,9 +1,9 @@
 {
-  "name": "@ABILITY@", 
-  "description": "@NAME@, @RARITY@ ability card @ABILITY@",  
-  "image": "https://conquestofsol.com/_nft/images/@IMGURI@",
+  "name": "CSF-Card-@NAME@", 
+  "description": "@ABILITY@",  
+  "image": "https://gateway.pinata.cloud/ipfs/@IMGURI@",
   "card_id": "@NAME@",
-  "external_url": "https://conquestofsol.com/",
+  "external_url": "http://www.conquestofsol.com/",
   "background_color": "c9f2f5",
   "attributes": [
 		{

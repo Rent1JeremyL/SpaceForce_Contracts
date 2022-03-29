@@ -1,0 +1,12 @@
+https://testnets.opensea.io/assets/0xd5e6dbbc0f01ae42b98a785bac14f984b05a8816/1
+
+https://rinkeby-api.opensea.io/asset/0xd5e6dbbc0f01ae42b98a785bac14f984b05a8816/0/validate/2
+
+Rinkaby
+0xc3d161c2fb2748ea3e838bd5f7505b68396dadac
+
+Mumbai - Test March 28 2022
+0x299DB413093efcb0a6Df14E4ae8D8Fe21BCeAc84
+
+Template change for image
+  "image": "https://gateway.pinata.cloud/ipfs/@IMGURI@",
