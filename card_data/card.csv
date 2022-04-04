@@ -39,24 +39,33 @@ Card ID|Name|GameName|Card_Type|ShipClass|ShipType|Faction|FactionName|Rarity|Co
 38|SH38|Paladin|Ship|Destroyer|Multi-Beam|Robot AI|Androknight Protectorate|Uncommon|3|1|NULL|SH38.png
 39|SH39|Savior|Ship|Destroyer|Multi-Gun|Robot AI|Androknight Protectorate|Uncommon|3|1|NULL|SH39.png
 40|SH40|Watchman|Ship|Destroyer|Assault|Robot AI|Androknight Protectorate|Uncommon|3|1|NULL|SH40.png
-41|SH41|Freya|Ship|Destroyer|Multi-Beam|Raider|Assandun Brotherhood|Rare|3|1|NULL|SH41.png
-42|SH42|Freya|Ship|Destroyer|Multi-Gun|Raider|Assandun Brotherhood|Rare|3|1|NULL|SH42.png
+41|SH41|Ixchel|Ship|Destroyer|Multi-Beam|Raider|Assandun Brotherhood|Rare|3|1|NULL|SH41.png
+42|SH42|Thor|Ship|Destroyer|Multi-Gun|Raider|Assandun Brotherhood|Rare|3|1|NULL|SH42.png
 43|SH43|Vulture|Ship|Cruiser|Light|Earth|United Sol Republic|Rare|4|1|NULL|SH43.png
 44|SH44|Harrier|Ship|Cruiser|Heavy|Earth|United Sol Republic|Rare|4|1|NULL|SH44.png
 45|SH45|Python|Ship|Cruiser|Medium|Mars|Mars Defense Force|Rare|4|1|NULL|SH45.png
 46|SH46|Anaconda|Ship|Cruiser|Heavy|Mars|Mars Defense Force|Rare|4|1|NULL|SH46.png
 47|SH47|Avem|Ship|Cruiser|Light|Alien|Achakang Empire|Rare|4|1|NULL|SH47.png
-48|SH48||Ship|Cruiser|Medium|Alien|Achakang Empire|Rare|4|1|NULL|SH48.png
+48|SH48|Veloxmors|Ship|Cruiser|Medium|Alien|Achakang Empire|Rare|4|1|NULL|SH48.png
 49|SH49|Bulwark|Ship|Cruiser|Medium|Robot AI|Androknight Protectorate|Rare|4|1|NULL|SH49.png
 50|SH50|Tarak|Ship|Cruiser|Heavy|Robot AI|Androknight Protectorate|Rare|4|1|NULL|SH50.png
-51|SH51||Ship|Cruiser|Light|Raider|Assandun Brotherhood|Rare|4|1|NULL|SH51.png
+51|SH51|Kukulkan|Ship|Cruiser|Light|Raider|Assandun Brotherhood|Rare|4|1|NULL|SH51.png
 52|SH52|Odin|Ship|Cruiser|Heavy|Raider|Assandun Brotherhood|Rare|4|1|NULL|SH52.png
 53|SH53|Teratorn|Ship|Battle Cruiser|Battle|Earth|United Sol Republic|Epic|5|1|NULL|SH53.png
 54|SH54|Titanboa|Ship|Battle Cruiser|Battle|Mars|Mars Defense Force|Epic|5|1|NULL|SH54.png
-55|SH55||Ship|Battle Cruiser|Battle|Alien|Achakang Empire|Epic|5|1|NULL|SH55.png
+55|SH55|Volturius|Ship|Battle Cruiser|Battle|Alien|Achakang Empire|Epic|5|1|NULL|SH55.png
 56|SH56|Andromeda|Ship|Battle Cruiser|Battle|Robot AI|Androknight Protectorate|Epic|5|1|NULL|SH56.png
-57|SH57||Ship|Fighter|Interceptor|Earth|United Sol Republic|Uncommon|1|2|NULL|SH57.png
-58|SH58||Ship|Fighter|Multi-Role|Earth|United Sol Republic|Uncommon|1|2|NULL|SH58.png
-59|SH59||Ship|Fighter|Heavy Assault|Earth|United Sol Republic|Uncommon|1|2|NULL|SH59.png
+57|SH57|Kestrel|Ship|Fighter|Interceptor|Earth|United Sol Republic|Uncommon|1|2|NULL|SH57.png
+58|SH58|Harpy|Ship|Fighter|Multi-Role|Earth|United Sol Republic|Uncommon|1|2|NULL|SH58.png
+59|SH59|Buzzard MKII|Ship|Fighter|Heavy Assault|Earth|United Sol Republic|Uncommon|1|2|NULL|SH59.png
 60|AB1|Rapid Fire|Ability|NULL|NULL|NULL|NULL|Common|1|NULL|Rapid Fire|AB1.png
 61|AB2|Energy Reserves|Ability|NULL|NULL|NULL|NULL|Common|0|NULL|Energy Reserves|AB2.png
+62|AB3|Weapons Specialist - Missile|Ability|NULL|NULL|NULL|NULL|Uncommon|2|NULL|Weapons Specialist - Missile|AB3.png
+63|AB4|Shield Boosters|Ability|NULL|NULL|NULL|NULL|Uncommon|2|NULL|Shield Boosters|AB4.png
+64|AB5|Star Carrier: Scramble the Fleet|Ability|NULL|NULL|NULL|NULL|Rare|4|NULL|Star Carrier: Scramble the Fleet|AB5.png
+65|AB6|Star Carrier: Raid the Quartermaster Stores|Ability|NULL|NULL|NULL|NULL|Uncommon|4|NULL|Star Carrier: Raid the Quartermaster Stores|AB6.png
+66|AB7|Return Fire|Ability|NULL|NULL|NULL|NULL|Common|2|NULL|Return Fire|AB7.png
+67|AB8|Star Carrier: Overload the Laser Cannons!|Ability|NULL|NULL|NULL|NULL|Uncommon|2|NULL|Star Carrier: Overload the Laser Cannons!|AB8.png
+68|AB9|Energy Overload|Ability|NULL|NULL|NULL|NULL|Uncommon|0|NULL|Energy Overload|AB9.png
+69|AB10|Star Carrier: It's a trap!|Ability|NULL|NULL|NULL|NULL|Uncommon|2|NULL|Star Carrier: It's a trap!|AB10.png
+70|AB11|Star Carrier: Arm the Nuclear Warhead!|Ability|NULL|NULL|NULL|NULL|Rare|5|NULL|Star Carrier: Arm the Nuclear Warhead!|AB11.png
