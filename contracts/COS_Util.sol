@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.1;
 
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
@@ -73,5 +73,14 @@ library ConquestOfSolUtil {
         returns (string memory)
     {
         return strConcat(_a, _b, "", "", "");
+    }
+
+    function isNullStr(string memory _test) internal pure returns (bool) {
+        bytes memory tempEmptyStringTest = bytes(_test); // Uses memory
+        if (tempEmptyStringTest.length == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

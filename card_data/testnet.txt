@@ -12,10 +12,10 @@ Mumbai - Test March 28 2022 5pm
 NFT = 0x9B52ba7f90b605936565c2b3ceED578211dF54E7 - Tested Success
 Token = 0xe4F7B82501640a3e0f03bbD1819a7571914e55AD - Tested Success
 DAI = 0x001B3B4d0F3714Ca98ba10F6042DaEbF0B1B7b6F
-Presale = 0xec0e88a3cc5c329459d96336b13CbEeFdf658e9A
+Presale = 0xcd0013963ca85136BDB6aA32cb2D569e5bA51A5f - Tested Success
 Airdrop = 0xe4F7B82501640a3e0f03bbD1819a7571914e55AD - Tested Success
 
-Template change for image
+Template change for image -- OLD CODE --
   "image": "https://gateway.pinata.cloud/ipfs/@IMGURI@",
   
 MaxTransfer 100.000000000000000000

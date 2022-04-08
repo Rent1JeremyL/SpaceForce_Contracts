@@ -23,7 +23,7 @@ contract Presale is ReentrancyGuard {
     uint256 public presaleTokensSold = 0;
     uint256 public usdcReceived = 0;
     // $1 = 4 Tokens @ 0.25
-    uint256 public constant TOKEN_PER_USDC = 250000000000000000;
+    uint256 public constant USDC_PER_TOKEN = 250000000000000000;
     // $1 = 100 Tokens @ 0.01
     // uint256 public constant TOKEN_PER_USDC = 100000000000000;	
 
@@ -57,18 +57,19 @@ contract Presale is ReentrancyGuard {
         presaleDays = _presaleDays;
     }
 
-    function purchase (uint256 _amount) public {
+    function purchaseTokens(uint256 _amount) public {
         require(!paused, "Presale: paused");
         require(_amount > 0, "Presale: amount should greater than 0");
         require(block.timestamp >= startTimeStamp, "Presale: presale not start yet");
         require(block.timestamp <= startTimeStamp + presaleDays * DAY, "Presale: presale had already finished");
 
         address buyer = msg.sender;
-        uint256 tokensAmount = _amount.mul(TOKEN_PER_USDC);
+        uint256 tokensAmount = _amount * 10 ** 18;
+        uint256 usdcAmount = _amount.mul(USDC_PER_TOKEN);
         uint256 CAP = token.balanceOf(address(this));
         require (presaleTokensSold +  tokensAmount <= CAP, "Presale: hardcap reached");
 
-        usdc.safeTransferFrom(msg.sender, address(this), _amount);
+        usdc.safeTransferFrom(msg.sender, address(this), usdcAmount);
         tokenBalances[buyer] = tokenBalances[buyer].add(tokensAmount);
         presaleTokensSold = presaleTokensSold.add(tokensAmount);
         usdcReceived = usdcReceived.add(_amount);
