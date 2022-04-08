@@ -1,0 +1,30 @@
+{
+  "name": "Shield Boosters", 
+  "description": "AB4, Uncommon ability card Shield Boosters",  
+  "image": "https://conquestofsol.com/_nft/images/AB4.png",
+  "card_id": "AB4",
+  "external_url": "https://conquestofsol.com/",
+  "background_color": "c9f2f5",
+  "attributes": [
+		{
+		  "trait_type": "card_type", 
+		  "value": "Ability"
+		},
+		{
+		  "trait_type": "edition", 
+		  "value": "standard"
+		}, 		
+		{
+		  "trait_type": "cost", 
+		  "value": 2
+		}, 		
+		{
+		  "trait_type": "rarity", 
+		  "value": "Uncommon"
+		},
+		{
+		  "trait_type": "ability", 
+		  "value": "Shield Boosters"
+		}		
+	  ]
+}

@@ -9,7 +9,18 @@ Mumbai - Test March 28 2022 1pm
 0x299DB413093efcb0a6Df14E4ae8D8Fe21BCeAc84
 
 Mumbai - Test March 28 2022 5pm
-0x9B52ba7f90b605936565c2b3ceED578211dF54E7
+NFT = 0x9B52ba7f90b605936565c2b3ceED578211dF54E7 - Tested Success
+Token = 0xe4F7B82501640a3e0f03bbD1819a7571914e55AD - Tested Success
+DAI = 0x001B3B4d0F3714Ca98ba10F6042DaEbF0B1B7b6F
+Presale = 0xec0e88a3cc5c329459d96336b13CbEeFdf658e9A
+Airdrop = 0xe4F7B82501640a3e0f03bbD1819a7571914e55AD - Tested Success
 
 Template change for image
   "image": "https://gateway.pinata.cloud/ipfs/@IMGURI@",
+  
+MaxTransfer 100.000000000000000000
+
+https://www.epochconverter.com/
+1649176773
+
+000240000000000000

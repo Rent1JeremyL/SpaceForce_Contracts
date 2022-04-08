@@ -1,0 +1,44 @@
+{
+  "name": "Savior", 
+  "description": "Savior, SH39, Uncommon ship card from the Androknight Protectorate",
+  "image": "https://conquestofsol.com/_nft/images/SH39.png",
+  "card_id": "SH39",
+  "external_url": "https://conquestofsol.com/",
+  "background_color": "fff2cc",
+  "attributes": [
+		{
+		  "trait_type": "card_type", 
+		  "value": "Ship"
+		},
+		{
+		  "trait_type": "edition", 
+		  "value": "standard"
+		},		
+		{
+		  "trait_type": "ship_class", 
+		  "value": "Destroyer"
+		},
+		{
+		  "trait_type": "ship_type", 
+		  "value": "Multi-Gun"
+		}, 		
+		{
+		 "display_type":"number",
+		  "trait_type":"tech",
+		  "value":1,
+		  "max_value":3
+		},
+		{
+		  "trait_type": "cost", 
+		  "value": 3
+		}, 		
+		{
+		  "trait_type": "rarity", 
+		  "value": "Uncommon"
+		},
+		{
+		  "trait_type": "faction", 
+		  "value": "Androknight Protectorate"
+		}	
+	  ]
+}

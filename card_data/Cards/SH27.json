@@ -1,0 +1,44 @@
+{
+  "name": "Horus I", 
+  "description": "Horus I, SH27, Uncommon ship card from the Assandun Brotherhood",
+  "image": "https://conquestofsol.com/_nft/images/SH27.png",
+  "card_id": "SH27",
+  "external_url": "https://conquestofsol.com/",
+  "background_color": "fff2cc",
+  "attributes": [
+		{
+		  "trait_type": "card_type", 
+		  "value": "Ship"
+		},
+		{
+		  "trait_type": "edition", 
+		  "value": "standard"
+		},		
+		{
+		  "trait_type": "ship_class", 
+		  "value": "Frigate"
+		},
+		{
+		  "trait_type": "ship_type", 
+		  "value": "Light"
+		}, 		
+		{
+		 "display_type":"number",
+		  "trait_type":"tech",
+		  "value":1,
+		  "max_value":3
+		},
+		{
+		  "trait_type": "cost", 
+		  "value": 2
+		}, 		
+		{
+		  "trait_type": "rarity", 
+		  "value": "Uncommon"
+		},
+		{
+		  "trait_type": "faction", 
+		  "value": "Assandun Brotherhood"
+		}	
+	  ]
+}

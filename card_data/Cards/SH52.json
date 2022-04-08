@@ -1,0 +1,44 @@
+{
+  "name": "Odin", 
+  "description": "Odin, SH52, Rare ship card from the Assandun Brotherhood",
+  "image": "https://conquestofsol.com/_nft/images/SH52.png",
+  "card_id": "SH52",
+  "external_url": "https://conquestofsol.com/",
+  "background_color": "fff2cc",
+  "attributes": [
+		{
+		  "trait_type": "card_type", 
+		  "value": "Ship"
+		},
+		{
+		  "trait_type": "edition", 
+		  "value": "standard"
+		},		
+		{
+		  "trait_type": "ship_class", 
+		  "value": "Cruiser"
+		},
+		{
+		  "trait_type": "ship_type", 
+		  "value": "Heavy"
+		}, 		
+		{
+		 "display_type":"number",
+		  "trait_type":"tech",
+		  "value":1,
+		  "max_value":3
+		},
+		{
+		  "trait_type": "cost", 
+		  "value": 4
+		}, 		
+		{
+		  "trait_type": "rarity", 
+		  "value": "Rare"
+		},
+		{
+		  "trait_type": "faction", 
+		  "value": "Assandun Brotherhood"
+		}	
+	  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Star Carrier: Arm the Nuclear Warhead!", 
+  "description": "AB11, Rare ability card Star Carrier: Arm the Nuclear Warhead!",  
+  "image": "https://conquestofsol.com/_nft/images/AB11.png",
+  "card_id": "AB11",
+  "external_url": "https://conquestofsol.com/",
+  "background_color": "c9f2f5",
+  "attributes": [
+		{
+		  "trait_type": "card_type", 
+		  "value": "Ability"
+		},
+		{
+		  "trait_type": "edition", 
+		  "value": "standard"
+		}, 		
+		{
+		  "trait_type": "cost", 
+		  "value": 5
+		}, 		
+		{
+		  "trait_type": "rarity", 
+		  "value": "Rare"
+		},
+		{
+		  "trait_type": "ability", 
+		  "value": "Star Carrier: Arm the Nuclear Warhead!"
+		}		
+	  ]
+}
