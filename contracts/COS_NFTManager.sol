@@ -40,11 +40,6 @@ contract ConquestOfSolNFTManager is Ownable, ReentrancyGuard, Pausable {
     constructor(IERC721CSol _nft, address _token) { 
         nft = _nft;
         token = IERC20Burnable(_token);
-        // Add cost 1,2,3 cards twice
-        initShip(1, 10);
-        initShip(11, 21);
-        initShip(22, 32);
-        //initShip(33, 42);
     }
 
     function _tokenTransfer(uint256 _amount) internal returns(bool) {
@@ -72,8 +67,7 @@ contract ConquestOfSolNFTManager is Ownable, ReentrancyGuard, Pausable {
         return nftId;
     }
     
-    function initShip(uint _start, uint _end) public onlyOwner {
-        // Add ship cards 1/2/3
+    function initShipLoop(uint _start, uint _end) public onlyOwner {
         string memory ship = "";
         for (uint i = _start; i <= _end; i++) {
             ship = ConquestOfSolUtil.strConcat("SH", Strings.toString(i));
@@ -88,6 +82,23 @@ contract ConquestOfSolNFTManager is Ownable, ReentrancyGuard, Pausable {
             abil = ConquestOfSolUtil.strConcat("AB", Strings.toString(i));
             AddCard(abil,abil);
         }  
+    }
+
+    function loadShips1() public onlyOwner {
+        // Add ship cards 1/2/3
+        initShipLoop(1, 10);
+        initShipLoop(11, 21);
+    }
+
+    function loadShips2() public onlyOwner {
+        // Add ship cards 1/2/3
+        initShipLoop(22, 32);
+        initShipLoop(33, 42);
+    }
+
+    function loadShips3() public onlyOwner {
+        // Add ship cards 4/5
+        initShipLoop(43, 56);
     }
 
     function AddCard(string memory _id, string memory _jsonKey) public onlyOwner {
