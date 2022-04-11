@@ -1,3 +1,6 @@
+Twitter Tag
+#Defi #play2earn #polygonNFT #Bitcoin #Polygon #MATIC
+
 https://testnets.opensea.io/assets/0xd5e6dbbc0f01ae42b98a785bac14f984b05a8816/1
 
 https://rinkeby-api.opensea.io/asset/0xd5e6dbbc0f01ae42b98a785bac14f984b05a8816/0/validate/2
@@ -13,7 +16,9 @@ NFT = 0x9B52ba7f90b605936565c2b3ceED578211dF54E7 - Tested Success
 Token = 0xe4F7B82501640a3e0f03bbD1819a7571914e55AD - Tested Success
 DAI = 0x001B3B4d0F3714Ca98ba10F6042DaEbF0B1B7b6F
 Presale = 0xcd0013963ca85136BDB6aA32cb2D569e5bA51A5f - Tested Success
-Airdrop = 0xe4F7B82501640a3e0f03bbD1819a7571914e55AD - Tested Success
+Airdrop = 0x45aEb4551f8de35069eF4574e494Ec1a39f1e4Dc - Tested Success
+Util = 0x1462A4Ea293a919A8DaA6e4A1A626528F6816B5e
+NFTManager = 0xc0fE959aE8E1C4570BbC788D66D500a391D7d13C
 
 Template change for image -- OLD CODE --
   "image": "https://gateway.pinata.cloud/ipfs/@IMGURI@",

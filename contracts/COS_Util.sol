@@ -2,28 +2,41 @@
 
 pragma solidity ^0.8.1;
 
-import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-
 /**
- * @dev String operations.
+ * @dev Conquest of Sol Util Functions
  */
 library ConquestOfSolUtil {
     
-    function randomNumber(uint256 mod, uint256 _seed) public view returns(uint) {
+    function randomNumber(uint256 _mod, uint256 _seed) public view returns(uint) {
         uint256 rand = uint256(keccak256(abi.encodePacked(block.difficulty, block.timestamp, _seed)));
-        rand = SafeMath.mod(rand, mod);
+        rand = mod(rand, _mod);
         if(rand == 0)
             rand = 1;
-        if(rand > mod)
-            rand = mod;
+        if(rand > _mod)
+            rand = _mod;
             
         return rand;
     }
     
-    function randomNumber(uint256 mod) public view returns(uint) {
-        return randomNumber(mod, 1);
+    function randomNumber(uint256 _mod) public view returns(uint) {
+        return randomNumber(_mod, 1);
     }
-    
+
+     /* @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),
+     * reverting when dividing by zero.
+     *
+     * Counterpart to Solidity's `%` operator. This function uses a `revert`
+     * opcode (which leaves remaining gas untouched) while Solidity uses an
+     * invalid opcode to revert (consuming all remaining gas).
+     *
+     * Requirements:
+     *
+     * - The divisor cannot be zero.
+     */
+    function mod(uint256 a, uint256 b) internal pure returns (uint256) {
+        return a % b;
+    }
+
         // via https://github.com/oraclize/ethereum-api/blob/master/oraclizeAPI_0.5.sol
     function strConcat(
         string memory _a,

@@ -4,32 +4,27 @@ pragma solidity ^0.8.1;
 
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
-
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "./COS_Util.sol";
+
 import "./IERC20Burnable.sol";
+import "./IERC721CSol.sol";
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 
-import "./COS_Util.sol";
-import "./COS_Card_NFT.sol";
-
-contract GameManager is Ownable, ReentrancyGuard, Pausable {
+contract ConquestOfSolNFTManager is Ownable, ReentrancyGuard, Pausable {
     using SafeMath for uint256;
     using Counters for Counters.Counter;
 
     IERC20Burnable public token;
-    
+
     uint256 private nonce = 0;
     uint256 public TOKENS_PER_NFT = 4000000000000000000;
-    bool public BURN_TOKENS = true;
     bool public FREE_NFT = false;
 
-    string constant SHIP = "SH";
-    string constant ABILITY = "AB";
-    
-    ConquestOfSolCard public nft;
+    IERC721CSol public nft;
 
     struct Card {
         uint256 id;
@@ -42,21 +37,22 @@ contract GameManager is Ownable, ReentrancyGuard, Pausable {
 
     event MintedCard(address indexed _address, string _cardId, uint256 _cost);
 
-    constructor(ConquestOfSolCard _nft, address _token) { 
+    constructor(IERC721CSol _nft, address _token) { 
         nft = _nft;
         token = IERC20Burnable(_token);
-        init();
+        // Add cost 1,2,3 cards twice
+        initShip(1, 10);
+        initShip(11, 21);
+        initShip(22, 32);
+        //initShip(33, 42);
     }
 
     function _tokenTransfer(uint256 _amount) internal returns(bool) {
         if(FREE_NFT)
             return true;
-
-        if(BURN_TOKENS){
+        else{
             token.burn(_amount);
             return true;
-        }else{
-            return token.transfer(address(this), _amount);
         }
     }
 
@@ -76,12 +72,24 @@ contract GameManager is Ownable, ReentrancyGuard, Pausable {
         return nftId;
     }
     
-    function init() private {
-        AddCard("SH1","SH1");
-        AddCard("SH2","SH2");
-        AddCard("AB1","AB1");
+    function initShip(uint _start, uint _end) public onlyOwner {
+        // Add ship cards 1/2/3
+        string memory ship = "";
+        for (uint i = _start; i <= _end; i++) {
+            ship = ConquestOfSolUtil.strConcat("SH", Strings.toString(i));
+            AddCard(ship,ship);
+        } 
     }
-    
+
+    function initABil() public onlyOwner {
+        // Add ability cards  
+        string memory abil = "";
+        for (uint i = 1; i <= 11; i++) {
+            abil = ConquestOfSolUtil.strConcat("AB", Strings.toString(i));
+            AddCard(abil,abil);
+        }  
+    }
+
     function AddCard(string memory _id, string memory _jsonKey) public onlyOwner {
         require(ConquestOfSolUtil.isNullStr(_id) == false, "NFT Manager: Ids cant be blank");
         require(ConquestOfSolUtil.isNullStr(_jsonKey) == false, "NFT Manager: JSON key cant be blank");
@@ -114,10 +122,6 @@ contract GameManager is Ownable, ReentrancyGuard, Pausable {
     function setTokenPerNFT(uint256 _amount) public onlyOwner {
         require(_amount > 100,"NFT Manager: can't be 0");
         TOKENS_PER_NFT = _amount;
-    }
-
-    function toggleBurn(bool _on) public onlyOwner {
-        BURN_TOKENS = _on;
     }
 
     function toggleFreeNFTS(bool _on) public onlyOwner {

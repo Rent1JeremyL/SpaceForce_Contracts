@@ -10,8 +10,7 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 /// @custom:security-contact conquestofsol@gmail.com
 contract CSOLSHARD is ERC20, ERC20Burnable, Pausable, AccessControl {
     using SafeMath for uint256;
-	// Burn address
-	//address public constant BURN_ADDRESS = 0x000000000000000000000000000000000000dEaD;
+
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 	bytes32 public constant OWNER_ROLE = keccak256("OWNER_ROLE");
@@ -34,10 +33,14 @@ contract CSOLSHARD is ERC20, ERC20Burnable, Pausable, AccessControl {
     // The duration that the anti-bot function last: 200 blocks ~  10mins (from launch)
     uint256 public constant ANTI_BOT_TIME = 200;
 
+	// Track minted
+	uint256 public totalMinted;
+
 	// Events
 	event OperatorTransferred(address indexed previousOperator, address indexed newOperator);
 	event MaxTransferAmountRateUpdated(address indexed operator, uint256 previousRate, uint256 newRate);
 
+    // Modifiers
 	modifier antiWhale(address sender, address recipient, uint256 amount) {
 		if (maxTransferAmount() > 0) {
 			if (_excludedFromAntiWhale[sender] == false && _excludedFromAntiWhale[recipient] == false) {
@@ -81,7 +84,7 @@ contract CSOLSHARD is ERC20, ERC20Burnable, Pausable, AccessControl {
         _setupRole(PAUSER_ROLE, _msgSender());
 
 		// Setup LP pools wtih 10,000 tokens
-        _mint(msg.sender, 10000000000000000000000);
+        mint(msg.sender, 10000000000000000000000);
 	}
 
     function pause() public onlyRole(PAUSER_ROLE) {
@@ -97,6 +100,7 @@ contract CSOLSHARD is ERC20, ERC20Burnable, Pausable, AccessControl {
         //require(hasRole(MINTER_ROLE, _msgSender()), "ERC20PresetMinterPauser: must have minter role to mint");
 
 		_mint(_to, _amount);
+		totalMinted += _amount;
 	}
 
 	/// @dev overrides transfer function to meet tokenomics of BTN
