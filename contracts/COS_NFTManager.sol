@@ -1,11 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.1;
-
-import "@openzeppelin/contracts/utils/Counters.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
-import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-import "./COS_Util.sol";
+pragma solidity 0.8.11;
 
 import "./IERC20Burnable.sol";
 import "./IERC721CSol.sol";
@@ -13,6 +8,11 @@ import "./IERC721CSol.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
+
+import "@openzeppelin/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "./COS_Util.sol";
 
 contract ConquestOfSolNFTManager is Ownable, ReentrancyGuard, Pausable {
     using SafeMath for uint256;
