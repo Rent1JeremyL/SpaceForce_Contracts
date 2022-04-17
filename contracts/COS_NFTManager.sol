@@ -42,15 +42,6 @@ contract ConquestOfSolNFTManager is Ownable, ReentrancyGuard, Pausable {
         token = IERC20Burnable(_token);
     }
 
-    function _tokenTransfer(uint256 _amount) internal returns(bool) {
-        if(FREE_NFT)
-            return true;
-        else{
-            token.burn(_amount);
-            return true;
-        }
-    }
-
     function MintRandomCard() public returns(string memory) {
         require(!nft.paused(), "NFT Contract paused.");
         nonce++;
@@ -61,7 +52,11 @@ contract ConquestOfSolNFTManager is Ownable, ReentrancyGuard, Pausable {
           
         string memory nftId = _cardDB[randNumber].cardId;
         nft.mintCard(buyer, nftId, "_nft");
-        _tokenTransfer(TOKENS_PER_NFT);
+        
+        if(!FREE_NFT) {
+            token.transferFrom(buyer, address(this), TOKENS_PER_NFT);
+            token.burn(TOKENS_PER_NFT);
+        }
 
         emit MintedCard(buyer, nftId, TOKENS_PER_NFT);
         return nftId;

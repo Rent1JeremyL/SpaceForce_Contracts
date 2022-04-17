@@ -18,7 +18,7 @@ DAI = 0x001B3B4d0F3714Ca98ba10F6042DaEbF0B1B7b6F
 Presale = 0xcd0013963ca85136BDB6aA32cb2D569e5bA51A5f - Tested Success
 Airdrop = 0x45aEb4551f8de35069eF4574e494Ec1a39f1e4Dc - Tested Success
 Util = 0x1462A4Ea293a919A8DaA6e4A1A626528F6816B5e
-NFTManager = 0xc0fE959aE8E1C4570BbC788D66D500a391D7d13C
+NFTManager = 0x25d0F2187CAbDdfB4e257FCda733748788C74F3D
 
 Template change for image -- OLD CODE --
   "image": "https://gateway.pinata.cloud/ipfs/@IMGURI@",
