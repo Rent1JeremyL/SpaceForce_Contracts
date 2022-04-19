@@ -23,7 +23,13 @@ contract TokenTimelock {
 
     // timestamp when token release is enabled
     uint256 private immutable _releaseTime;
+    
+    // when the contract went live
+    uint256 private _startTimeStamp;
 
+    uint256 public constant DAY = 1 days;
+    uint256 public constant RELEASE_PER_MONTH = 125000000000000000000000;
+    uint256 public MAX_MONTHS = 40;
     /**
      * @dev Deploys a timelock instance that is able to hold the token specified, and will only release it to
      * `beneficiary_` when {release} is invoked after `releaseTime_`. The release time is specified as a Unix timestamp
@@ -34,7 +40,8 @@ contract TokenTimelock {
         address beneficiary_,
         uint256 releaseTime_
     ) {
-        require(releaseTime_ > block.timestamp, "TokenTimelock: release time is before current time");
+        require(releaseTime_ > block.timestamp, "TokenTimelock: release time is after current time");
+        _startTimeStamp = block.timestamp;
         _token = token_;
         _beneficiary = beneficiary_;
         _releaseTime = releaseTime_;
@@ -72,5 +79,16 @@ contract TokenTimelock {
         require(amount > 0, "TokenTimelock: no tokens to release");
 
         token().safeTransfer(beneficiary(), amount);
+    }
+
+    function monthlyRelease() public virtual {
+        uint256 amount = token().balanceOf(address(this));
+        require(amount > RELEASE_PER_MONTH, "TokenTimelock: no tokens to release");
+
+        uint256 monthsActive = (block.timestamp - _startTimeStamp) / (30 * DAY);
+        uint256 withdrawTimes = MAX_MONTHS - (amount / RELEASE_PER_MONTH );
+        require(monthsActive > withdrawTimes, "TokenTimelock: You can only withdraw once every 30 days");
+
+        token().safeTransfer(beneficiary(), RELEASE_PER_MONTH);
     }
 }
