@@ -52,7 +52,6 @@ contract ConquestOfSolCard is
     /**
      * @dev Make sure to pass trailing seperator on url
      * - Ex: ipfs:// or https://ipfs.io/ipfs/ or https://gateway.pinata.cloud/ipfs/
-     * or https://conquestofsol.com/_nft/
      */
     constructor(string memory _baseTokenURI)
         ERC721("Conquest of Sol Card", "CSOLCARD")

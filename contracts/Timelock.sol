@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.5.0) (token/ERC20/utils/TokenTimelock.sol)
 
-pragma solidity ^0.8.0;
+pragma solidity 0.8.11;
 
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 
@@ -90,5 +90,20 @@ contract TokenTimelock {
         require(monthsActive > withdrawTimes, "TokenTimelock: You can only withdraw once every 30 days");
 
         token().safeTransfer(beneficiary(), RELEASE_PER_MONTH);
+    }
+
+    function statusMonths() public view returns (uint256){
+        return (block.timestamp - _startTimeStamp) / (30 * DAY);
+    }
+
+    function statusWithdraws() public view returns (uint256){
+        uint256 amount = token().balanceOf(address(this));
+        uint256 withdrawTimes = MAX_MONTHS - (amount / RELEASE_PER_MONTH );
+
+        return withdrawTimes;
+    }
+
+    function balance() public view returns (uint256){
+        return token().balanceOf(address(this));
     }
 }

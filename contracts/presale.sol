@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.1;
+pragma solidity 0.8.11;
 
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
@@ -22,12 +22,8 @@ contract Presale is ReentrancyGuard {
 
     uint256 public presaleTokensSold = 0;
     uint256 public usdcReceived = 0;
-    // $1 = 4 Tokens @ 0.25
-    uint256 public constant USDC_PER_TOKEN = 250000000000000000;
     // $1 = 100 Tokens @ 0.01
-    // uint256 public constant TOKEN_PER_USDC = 100000000000000;	
-
-    //uint16 public referralCommissionRate = 500; // 5%
+    uint256 public constant USDC_PER_TOKEN = 10000000000000000;
 
     mapping (address => uint256) public tokenBalances;
 

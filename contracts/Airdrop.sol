@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 
-contract Airdrop is ReentrancyGuard {
+contract NFTAirdrop is ReentrancyGuard {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
     
@@ -18,7 +18,7 @@ contract Airdrop is ReentrancyGuard {
     uint256 public startTimeStamp;
     uint256 public presaleDays;
     uint256 public constant DAY = 1 days;
-    uint256 public constant TOKENS_PER_WALLET = 16000000000000000000;
+    uint256 public constant TOKENS_PER_WALLET = 400000000000000000000;
 
     uint256 public airdropTokensSent = 0;
 

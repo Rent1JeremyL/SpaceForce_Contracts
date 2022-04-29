@@ -67,7 +67,6 @@ contract CSOLSHARD is ERC20, ERC20Burnable, Pausable, AccessControl {
         _; 
 	}
 
-
 	/**
 	 * @notice Constructs the contract.
 	 */
@@ -82,9 +81,6 @@ contract CSOLSHARD is ERC20, ERC20Burnable, Pausable, AccessControl {
 
         _setupRole(MINTER_ROLE, _msgSender());
         _setupRole(PAUSER_ROLE, _msgSender());
-
-		// Setup LP pools wtih 10,000 tokens
-        mint(msg.sender, 10000000000000000000000);
 	}
 
     function pause() public onlyRole(PAUSER_ROLE) {
@@ -96,9 +92,6 @@ contract CSOLSHARD is ERC20, ERC20Burnable, Pausable, AccessControl {
     }
 	/// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
 	function mint(address _to, uint256 _amount) public onlyRole(MINTER_ROLE) {
-        //require(ERC20.totalSupply() + _amount <= cap(), "GovernanceToken: cap exceeded");
-        //require(hasRole(MINTER_ROLE, _msgSender()), "ERC20PresetMinterPauser: must have minter role to mint");
-
 		_mint(_to, _amount);
 		totalMinted += _amount;
 	}

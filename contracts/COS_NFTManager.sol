@@ -14,14 +14,14 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "./COS_Util.sol";
 
-contract ConquestOfSolNFTManager is Ownable, ReentrancyGuard, Pausable {
+contract CSOLNFTMANAGER is Ownable, ReentrancyGuard, Pausable {
     using SafeMath for uint256;
     using Counters for Counters.Counter;
 
     IERC20Burnable public token;
 
     uint256 private nonce = 0;
-    uint256 public TOKENS_PER_NFT = 4000000000000000000;
+    uint256 public TOKENS_PER_NFT = 100000000000000000000;
     bool public FREE_NFT = false;
 
     IERC721CSol public nft;
