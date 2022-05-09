@@ -16,7 +16,7 @@
 		},		
 		{
 		  "trait_type": "ship_class", 
-		  "value": "@SHIPCLASS@"
+		  "value": "Battle Cruiser"
 		},
 		{
 		  "trait_type": "ship_type", 

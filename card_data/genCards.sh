@@ -27,7 +27,7 @@ do
 	sed -i "s|@GAMENAME@|${gameName}|g" ${newFile}
 	sed -i 's/@NAME@/'${cName}'/g' ${newFile}
 	sed -i "s|@FACNAME@|${facName}|g" ${newFile}
-	sed -i 's/@SHIPCLASS@/'${shipClass}'/g' ${newFile}
+	sed -i "s|@SHIPCLASS@|${shipClass}|g" ${newFile}
 	sed -i 's/@IMGURI@/'${imgURI}'/g' ${newFile}
 	sed -i 's/@CARDTYPE@/'${cType}'/g' ${newFile}
 	sed -i "s|@SHIPTYPE@|${shipType}|g" ${newFile}

@@ -46,3 +46,5 @@ https://www.epochconverter.com/
 1649176773
 
 000240000000000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Unity\UnityEditor\Conquest Of Sol\Conquest Of Sol]
