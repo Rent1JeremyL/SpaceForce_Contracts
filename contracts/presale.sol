@@ -65,12 +65,12 @@ contract PRESALECSOLS is ReentrancyGuard {
         uint256 CAP = token.balanceOf(address(this));
         require (presaleTokensSold +  tokensAmount <= CAP, "Presale: hardcap reached");
 
-        usdc.safeTransferFrom(msg.sender, address(this), usdcAmount);
+        usdc.safeTransferFrom(buyer, address(this), usdcAmount);
         tokenBalances[buyer] = tokenBalances[buyer].add(tokensAmount);
         presaleTokensSold = presaleTokensSold.add(tokensAmount);
-        usdcReceived = usdcReceived.add(_amount);
+        usdcReceived = usdcReceived.add(usdcAmount);
 
-        token.safeTransfer(msg.sender, tokensAmount);
+        token.safeTransfer(buyer, tokensAmount);
 
         emit Purchase(buyer, _amount, tokensAmount);
     }
