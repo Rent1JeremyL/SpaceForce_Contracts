@@ -22,8 +22,10 @@ contract PRESALECSOLS is ReentrancyGuard {
 
     uint256 public presaleTokensSold = 0;
     uint256 public usdcReceived = 0;
-    // $1 = 100 Tokens @ 0.01
-    uint256 public constant USDC_PER_TOKEN = 10000000000000000;
+    // $1 = 100 Tokens @ 0.01, USDC is 6 decimals
+    uint256 public constant USDC_PER_TOKEN = 10000;
+    // $1 = 100 Tokens @ 0.01, at 18 decimals
+    // uint256 public constant USDC_PER_TOKEN = 10000000000000000;
 
     mapping (address => uint256) public tokenBalances;
 
